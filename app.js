@@ -37,6 +37,12 @@ const app = express();
 //Creating route of users
 const users = require('./routes/users');
 
+
+//Start Server
+const port = process.env.PORT || 8080;
+
+
+
 //Cors middleware
 app.use(cors());
 
@@ -72,8 +78,7 @@ app.get('*', (req, res) => {
 })
 
 
-//Start Server
-const port = process.env.PORT || 8080;
+
 
 app.listen(port, ()=> {
 
